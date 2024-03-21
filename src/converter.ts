@@ -10,7 +10,9 @@ export default class Converter {
     this.canvas = canvas;
     this.options = options;
     this.pdf = new jsPDF({
-      format: this.options.page.format,
+      // format: this.options.page.format,
+                 format: [this.canvas.width, this.canvas.height],
+
       orientation: this.options.page.orientation,
       ...this.options.overrides?.pdf,
       unit: "mm",

@@ -15,7 +15,7 @@ export default class Converter {
 
       orientation: this.options.page.orientation,
       ...this.options.overrides?.pdf,
-      unit: "mm",
+      unit: "px",
     });
   }
   getMarginTopMM() {
